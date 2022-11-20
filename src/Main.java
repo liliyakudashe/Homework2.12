@@ -3,45 +3,33 @@ import java.util.Map;
 import java.util.Objects;
 
 public class Main {
-    Map<String, String> telephoneDirectory = new HashMap<>();
     public static void main(String[] args) {
-        Map<String, String> telephoneDirectory = new HashMap<>();
-        telephoneDirectory.put("Гарри Поттер", "85621456977");
-        telephoneDirectory.put("Рональд Уизли", "854213657");
-        telephoneDirectory.put("Гермиона Грейнджер", "54221548792");
-        telephoneDirectory.put("Джини Уизли", "8564215779");
-        telephoneDirectory.put("Невил Долгопупс", "8795321459");
-        telephoneDirectory.put("Альбус Дамблдор", "54231586877");
-        telephoneDirectory.put("Северус Снейп", "541258795665");
-        telephoneDirectory.put("Том Редл", "2546987531");
-        telephoneDirectory.put("Драко Малфой", "5421369772");
-        telephoneDirectory.put("Минерва Макгонгл", "5548796321");
-        telephoneDirectory.put("Римус Люпин", "546987265");
-        telephoneDirectory.put("Сириус Блэк", "4587961235");
-        telephoneDirectory.put("Питэр Пэтигрю", "587964253");
-        telephoneDirectory.put("Джеймс Поттер", "896645212");
-        telephoneDirectory.put("Лили Поттер", "5468755126");
+
+        Directory directory = new Directory();
+        directory.addTelephone("Гарри Поттер", "85621456977");
+        directory.addTelephone("Рональд Уизли", "854213657");
+        directory.addTelephone("Гермиона Грейнджер", "54221548792");
+        directory.addTelephone("Джини Уизли", "8564215779");
+        directory.addTelephone("Невил Долгопупс", "8795321459");
+        directory.addTelephone("Альбус Дамблдор", "54231586877");
+        directory.addTelephone("Северус Снейп", "541258795665");
+        directory.addTelephone("Том Редл", "2546987531");
+        directory.addTelephone("Драко Малфой", "5421369772");
+        directory.addTelephone("Минерва Макгонгл", "5548796321");
+        directory.addTelephone("Римус Люпин", "546987265");
+        directory.addTelephone("Сириус Блэк", "4587961235");
+        directory.addTelephone("Питэр Пэтигрю", "587964253");
+        directory.addTelephone("Джеймс Поттер", "896645212");
+        directory.addTelephone("Лили Поттер", "5468755126");
+
+        System.out.println( directory.entries());
 
 
-
-        System.out.println(telephoneDirectory);
 
 
 
 
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Main main = (Main) o;
-        return Objects.equals(telephoneDirectory, main.telephoneDirectory);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(telephoneDirectory);
-    }
 
 }
